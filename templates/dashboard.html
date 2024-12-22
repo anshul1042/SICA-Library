@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h2>Admin Dashboard</h2>
+    <a href="/logout">Logout</a>
+
+    <h3>Shelves</h3>
+    <a href="/add_edit_shelf">Add/Edit Shelf</a>
+    <ul>
+        {% for shelf in shelves %}
+            <li>
+                <strong>Shelf {{ shelf[1] }}</strong>
+                <a href="/shelf/{{ shelf[1] }}">View Shelf</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h3>Borrowed Books</h3>
+    <a href="{{ url_for('borrowed_books') }}">View Borrowed Books</a>
+</body>
+</html>

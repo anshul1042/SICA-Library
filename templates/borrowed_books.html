@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Borrowed Books</title>
+</head>
+<body>
+    <h1>Borrowed Books</h1>
+    {% if borrowed_books %}
+        <ul>
+            {% for book in borrowed_books %}
+                <li>
+                    <strong>{{ book[0] }}</strong> borrowed by {{ book[1] }}
+                    (Due on {{ book[2] }})
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No borrowed books to display.</p>
+    {% endif %}
+</body>
+</html>

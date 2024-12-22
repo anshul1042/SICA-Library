@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Edit Shelf</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h2>Add/Edit Shelf</h2>
+    <form method="POST">
+        <label for="shelf_id">Shelf ID:</label>
+        <input type="text" name="shelf_id" id="shelf_id" required>
+        <br>
+        <label for="rack_id">Rack ID:</label>
+        <input type="text" name="rack_id" id="rack_id" required>
+        <br>
+        <label for="book_name">Book Name:</label>
+        <input type="text" name="book_name" id="book_name" required>
+        <br>
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author" required>
+        <br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" id="quantity" min="1" required>
+        <br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
