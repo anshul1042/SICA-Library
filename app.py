@@ -3,6 +3,9 @@ import qrcode
 import os
 import sqlite3
 from datetime import datetime, timedelta
+QR_CODE_OUTPUT_DIR = os.environ.get('QR_CODE_OUTPUT_DIR', '/tmp/qr_codes')
+
+os.makedirs(QR_CODE_OUTPUT_DIR, exist_ok=True)
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)  # generates a random 24-byte secret key
