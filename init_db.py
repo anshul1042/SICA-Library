@@ -3,6 +3,13 @@ import sqlite3
 DB_FILE = "library.db"
 
 schema = """
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL,
+    name TEXT NOT NULL
+);
+-- Existing tables
 CREATE TABLE IF NOT EXISTS shelves (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     shelf_id TEXT UNIQUE NOT NULL

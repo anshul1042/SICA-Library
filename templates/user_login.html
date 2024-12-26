@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <title>User Login</title>
 </head>
 <body>
-    <h2>Admin Login</h2>
-    <form method="POST" action="/login">
+    <h2>User Login</h2>
+    <form method="POST">
         <label for="email">Email:</label>
         <input type="email" name="email" id="email" required>
         <br>
@@ -17,12 +16,5 @@
         <br>
         <button type="submit">Login</button>
     </form>
-
-    <!-- Add links for User Registration and Login -->
-    <hr>
-    <h3>For Users</h3>
-    <a href="{{ url_for('register') }}">Register as User</a>
-    <br>
-    <a href="{{ url_for('user_login') }}">User Login</a>
 </body>
 </html>
