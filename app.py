@@ -5,7 +5,7 @@ import sqlite3
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
-app.secret_key = "your_secret_key"
+app.secret_key = os.urandom(24)  # generates a random 24-byte secret key
 
 # Database file
 DB_FILE = "library.db"
